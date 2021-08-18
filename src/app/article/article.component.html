@@ -1,11 +1,22 @@
 <p>Phạm Tuấn Thảo hãy cố gắng nhé!</p>
 <hr>
+<table>
 <div *ngFor="let art of articles">
-<a href="{{art.url}}" target="_blank">{{art.title}}</a>: <app-like></app-like>
+    <tr>
+      <td style="width: 380px;height: 10px">
+        <a href="{{art.url}}" target="_blank">{{art.title}}</a>
+      </td>
+      <td>
+        <app-like></app-like>
+      </td>
+    </tr>
 </div>
+</table>
+
+
 <h3>Hãy cố gắng nhé!</h3>
 <div>
-  <h2>Article Information</h2>
+    <h2 >Article Information</h2>
   <table>
     <tr>
       <td>Title:</td>
@@ -14,12 +25,13 @@
     <tr>
       <td>Url:</td>
       <td>
-        <textarea [(ngModel)]="article.url" cols="70" placeholder="Nhập văn bản"></textarea>
+        <textarea [(ngModel)]="article.url" cols="70" rows="10" placeholder="Nhập văn bản"></textarea>
       </td>
     </tr>
     <tr>
       <td></td>
-      <td><button style="float: right" (click)="addNewArticle()">Add</button></td>
+      <td><button style="float: right" (click)="addNewArticle()" style="background: aqua">Add</button></td>
     </tr>
   </table>
 </div>
+<hr>
