@@ -1,7 +1,7 @@
 <p>Phạm Tuấn Thảo hãy cố gắng nhé!</p>
 <hr>
 <div *ngFor="let art of articles">
-  <a href="{{art.url}}" target="_blank">{{art.title}}</a>
+<a href="{{art.url}}" target="_blank">{{art.title}}</a>: <app-like></app-like>
 </div>
 <h3>Hãy cố gắng nhé!</h3>
 <div>
@@ -14,7 +14,7 @@
     <tr>
       <td>Url:</td>
       <td>
-        <textarea [(ngModel)]="article.url" cols="70"></textarea>
+        <textarea [(ngModel)]="article.url" cols="70" placeholder="Nhập văn bản"></textarea>
       </td>
     </tr>
     <tr>
